@@ -1,0 +1,73 @@
+ // Practising Recursion in Java  until we conquer it
+
+// comment outing this thingfrom java code 
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class Codechef
+{
+    public static void printNum(int n){
+        if (n==0){
+            ;
+            return;
+            
+        } 
+        System.out.println(n);
+        printNum(n-1);
+        
+    }
+
+
+// Another recursion code 
+// topic: Sum of first n natural number 
+
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class Codechef
+{
+     private static void printSum(int n , int sum ){
+          if ( n==0){
+              System.out.println(sum);
+              return;
+              
+          }
+          sum+=n ;
+          printSum(n-1 , sum);
+     }
+   public static void main(String args[]){
+       
+       Scanner sc = new Scanner ( System.in);
+       
+       if ( sc.hasNextInt()){
+           int n= sc.nextInt();
+           int sum=0 ;
+           if (n>0){
+               printSum(n,sum);
+           }else{
+               System.out.println("Please Type Positive Integers Only");
+           }
+       }else {
+           System.out.println("Invalid Input!, Please  Type a valid Positive Integers");
+       }
+   }
+
+}
+
+    
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		int n= 5 ;
+		printNum( n);
+		
+
+	}
+}
+
+
+
+
