@@ -1,1 +1,62 @@
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class Codechef
+{
+     static void chefMembership(int d , int x , int y , int count  ){
+         boolean geted= false;
+         
+          if(x<=y ){
+              System.out.println(0);
+              return;
+          }
+          
+          int k= (100-d)/100;
+          if ( x>y){
+              if ( k*x <=y-1){
+                  geted = true ;
+                  count++;
+                  System.out.println(count);
+                  return;
+                  
+              }else{
+                  count++;
+                  chefMembership(d*(count+1) , x ,y-1 ,count);
+              }
+          }
+          
+          if (!geted){
+              System.out.println(-1);
+          }
+              
+          
+         
+         
+         
+     }
+     
+     
+     
+     
+     
+    
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		// your code goes here
+		Scanner sc = new Scanner ( System.in);
+		int t= sc.nextInt ();// number of testcases
+     
+     while ( t-->0){
+         int d= sc.nextInt();
+         int x= sc.nextInt();
+         int y= sc.nextInt();
+         int count =0 ;
+         // caling the recursive fumction
+         chefMembership(d, x, y  , 0);
+         
+     }
+
+	}
+}
 
