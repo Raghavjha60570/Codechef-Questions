@@ -1,0 +1,35 @@
+
+// first question in which my recursion code runs succesfully
+
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class Codechef
+{
+    private static void printSuborSwap(int x, int y ){
+        // Use GCD to find the result
+        int result = gcd(x, y);
+        System.out.println(result);
+    }
+    
+    // GCD function using Euclidean algorithm
+    private static int gcd(int x, int y) {
+        if (y == 0)
+            return x;
+        return gcd(y, x % y);
+    }
+
+    public static void main (String[] args) throws java.lang.Exception
+    {
+        Scanner sc= new Scanner(System.in);
+        int t = sc.nextInt();
+        while (t-- > 0) {
+            int x = sc.nextInt();
+            int y = sc.nextInt();
+            printSuborSwap(x, y);
+        }
+    }
+}
+ 
